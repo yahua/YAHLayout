@@ -16,14 +16,15 @@
 static char kStandardWidth;
 + (void)setStandardUIWidth:(CGFloat)width {
     
-    [UIView setStandardUIWidth:width];
-    [UIFont setStandardUIWidth:width];
     objc_setAssociatedObject(self, &kStandardWidth, @(width), OBJC_ASSOCIATION_RETAIN);
 }
 
 + (CGFloat)standardWidth {
     
     NSNumber *width = objc_getAssociatedObject(self, &kStandardWidth);
+    if (!width) {
+        width = @(375);
+    }
     return [width floatValue];
 }
 

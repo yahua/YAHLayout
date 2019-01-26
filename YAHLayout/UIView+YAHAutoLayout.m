@@ -8,24 +8,11 @@
 
 #import "UIView+YAHAutoLayout.h"
 #import "UIView+YAHLayout.h"
+#import "YAHLayout.h"
 
 #import <objc/runtime.h>
 
-#define kYHAutoLayoutScale  ([UIScreen mainScreen].bounds.size.width*1.0/[UIView standardWidth])
-
 @implementation UIView (YHAutoLayout)
-
-static char kStandardWidth;
-+ (void)setStandardUIWidth:(CGFloat)width {
-    
-    objc_setAssociatedObject(self, &kStandardWidth, @(width), OBJC_ASSOCIATION_RETAIN);
-}
-
-+ (CGFloat)standardWidth {
-    
-    NSNumber *width = objc_getAssociatedObject(self, &kStandardWidth);
-    return [width floatValue];
-}
 
 #pragma mark - positon and size
 

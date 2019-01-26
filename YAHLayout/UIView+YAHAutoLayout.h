@@ -10,13 +10,6 @@
 
 @interface UIView (YHAutoLayout)
 
-/**
- *  @author wangsw, 16-03-21 16:03:34
- *
- *  切图的标准宽度
- */
-+ (void)setStandardUIWidth:(CGFloat)width;
-
 //自动适配大小
 - (void)auto_left:(CGFloat)left;
 - (void)auto_top:(CGFloat)top;
