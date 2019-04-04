@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "yahua" => "yahua523@163.com" }
   
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
   s.requires_arc = true
 
   s.source       = { :git => "https://github.com/yahua/YAHLayout.git", :tag => "0.0.1" }
